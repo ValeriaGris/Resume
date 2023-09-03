@@ -1,0 +1,293 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.body-bg {
+  background-image: url("../img/background.jpg");
+  background-size: cover; 
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+}
+
+.full-screen{
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  /* padding: 50px 15px; */
+
+}
+
+.full-screen_video{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.full-screen_body{
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex: 1 1 auto;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.full-screen_title{
+  /* мин размер шрифта плюс макс размер умножаем на макс ширину экрана и делим на минимальный*/
+  font-size: calc(16px + 28*100vw/1024);
+  font-weight: bold;
+  color: #cac9c9;
+  text-transform: uppercase;
+  letter-spacing: 8px;
+}
+
+.full-screen_text{
+  font-size: calc(12px + 18*100vw/1024);
+  font-weight: bold;
+  color: #8d8d8d;
+  text-transform: uppercase;
+  /* letter-spacing: 15px; */
+  padding: 20px 15px;
+}
+
+
+.color-grey {
+  color: #4b4b4b;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.cv-header,
+.profile,
+.experience,
+.company-name {
+  font-family: "IBM Plex Serif", serif;
+}
+
+h2{
+  margin-bottom: 40px;
+}
+
+.cv {
+  /* border: 1px solid #4b4b4b;  */
+  box-shadow: 1px 1px 10px #000;
+  background-color: #fff;
+  background-image: url("../img/background top.png");
+  background-position: left top;
+  background-repeat: no-repeat;
+  background-size: 1100px;
+}
+
+.cv-photo {
+  background-position: no-repeat;
+  width: 1100px;
+}
+
+.cv-name{
+  position: absolute;
+  margin-left: 700px;
+  margin-top: 180px;
+
+}
+
+.cv-left {
+  /* background-color: #4b4b4b; */
+  margin-top: 464px;
+  min-height: 30vh;
+  color: #000000;
+}
+
+.cv-left a {
+  color: #000000;
+}
+
+.cv-left a:hover {
+  color:#4b4b4b;
+}
+
+a{
+  text-decoration: none;
+}
+
+.cv-left ul {
+  line-height: 175%;
+  /* padding-left: 30px;  */
+} 
+
+
+.ul-center{
+  display: inline-block;
+  text-align: left;
+  margin-top: 30px;
+  list-style-type: none;
+
+}
+
+.ul-language{
+  list-style-type: none;
+  padding-left: 0;
+}
+
+li{
+  padding-left: 10px;
+  padding-bottom: 10px;
+}
+
+.tel{
+  list-style-image: url("../img/phone-1.png");
+  background-repeat: no-repeat;
+}
+
+.email{
+  list-style-image: url("../img/email.png");
+  background-repeat: no-repeat;
+}
+
+.behance{
+  list-style-image: url("../img/behance.png");
+  background-repeat: no-repeat;
+}
+
+
+.cv-left ul.contacts-block {
+  list-style: none;
+}
+
+.cv-left .address {
+  font-style: italic;
+  margin-top: 50px;
+}
+
+.education{
+  display: inline-block;
+  text-align: left;
+}
+
+.photo-block {
+}
+
+.contacts-block {
+  
+}
+
+.cv-right {
+  min-height: 30vh;
+  color: #131313;
+  background-image: url("../img/background down.png");
+  background-position: right bottom;
+  background-repeat: no-repeat;
+  background-size: 795px;
+  margin-top: 464px;
+}
+
+.cv-right-padding{
+  padding-left: 200px;
+  padding-right: 50px;
+
+}
+
+.cv-right ul{
+  list-style-type: none;
+  padding-left: 0;
+
+}
+
+.check{
+}
+
+.check li:before  {
+  content: "\2714";
+  color:#670bb7
+}
+
+.background-down{
+  background-position: no-repeat;
+  width: 795px;
+  padding-right: 0;
+}
+
+article {
+  padding: 20px;
+}
+
+.company-name {
+  font-size: 1.1rem;
+  text-transform: uppercase;
+}
+
+.company-name i {
+  font-size: 0.8rem;
+  font-family: Aria, sans-serif;
+  text-transform: none;
+}
+
+.job-title {
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
+
+.lines {
+  overflow: hidden;
+}
+
+.lines::before,
+.lines::after {
+  content: "";
+  display: inline-block;
+  box-sizing: border-box;
+  width: 100%;
+  height: 3px;
+  background-color: #4b4b4b;
+  border: 1px solid #fff;
+  vertical-align: middle;
+}
+
+.lines::before {
+  margin-left: -100%;
+}
+
+.lines::after {
+  margin-right: -100%;
+}
+
+@media (max-width: 991.98px) {
+  .cv-left h1,
+  .cv-left h2,
+  .cv-left h3,
+  .cv-left h4 {
+    font-size: 1.3rem;
+  }
+  .cv-left ul {
+    line-height: 150%;
+    padding-left: 25px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .container {
+    margin-bottom: 0 !important;
+    margin-top: 0 !important;
+  }
+  .cv {
+    margin-top: 0;
+  }
+
+  .photo-block img {
+    display: block;
+    max-width: 50%;
+    margin: 20px auto;
+  }
+}
+
